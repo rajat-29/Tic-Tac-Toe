@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity"
+    android:padding="40dp">
+
+    <TextView
+        android:id="@+id/title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome To Tic Tac Toe"
+        android:textColor="#f28c2e"
+        android:textSize="40sp"
+        android:layout_marginTop="40dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/title_bar"
+        android:layout_marginTop="120dp">
+
+        <EditText
+            android:id="@+id/firstPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First Player Name"
+            android:textColorHint="#fff"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#66a3ff"
+            android:textColor="#fff"
+            />
+        <EditText
+            android:id="@+id/secondPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Second Player Name"
+            android:textColorHint="#fff"
+            android:layout_marginBottom = "25dp"
+            android:backgroundTint="#66a3ff"
+            android:textColor="#fff"/>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/secondPlayer"
+            android:layout_gravity="center_horizontal"
+            android:text="Start Game"
+            android:textAllCaps="false"
+            android:background="@drawable/roundedbtn"
+            android:textColor="#fff"
+            android:onClick="startPlay" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+
