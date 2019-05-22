@@ -9,6 +9,8 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
+    String player1, player2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +27,13 @@ public class MainActivity extends AppCompatActivity {
             play2.setError("Name is empty");
         }
         else {
+            player1 = String.valueOf(play1.getText());
+            player2 = String.valueOf(play2.getText());
+
+
             Intent n = new Intent(this,Home.class);
+            n.putExtra("Player1", player1);
+            n.putExtra("Player2", player2);
             startActivity(n);
         }
 
